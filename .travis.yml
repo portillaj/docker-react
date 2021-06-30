@@ -3,7 +3,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t jasonportilla/docker-react -f dockerfile.dev .
+  - docker build -t jasonportilla/docker-react -f Dockerfile.dev .
 
 script:
   - - docker run -e CI=true jasonportilla/docker-react npm run test -- --watchAll=false
